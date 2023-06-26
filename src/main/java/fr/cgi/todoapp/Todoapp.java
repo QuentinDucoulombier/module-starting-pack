@@ -1,5 +1,8 @@
 package fr.cgi.todoapp;
 
+import fr.cgi.todoapp.controller.ConfigController;
+import fr.cgi.todoapp.controller.MyScriptsController;
+import fr.cgi.todoapp.controller.MyTodoListController;
 import fr.cgi.todoapp.controller.TodoappController;
 import fr.cgi.todoapp.service.ServiceFactory;
 import fr.wseduc.mongodb.MongoDb;
@@ -24,7 +27,10 @@ public class Todoapp extends BaseServer {
 		ServiceFactory serviceFactory = new ServiceFactory(vertx, storage, Neo4j.getInstance(), Sql.getInstance(), MongoDb.getInstance());
 
 		// we add a controller (where API and other will be accessible from our client)
-		addController(new TodoappController(serviceFactory));
+		//addController(new TodoappController(serviceFactory));
+		addController(new MyTodoListController());
+		addController(new ConfigController());
+		addController(new MyScriptsController());
 	}
 
 }
