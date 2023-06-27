@@ -1,5 +1,5 @@
     {
-      "name": "fr.cgi~todoapp~0.1-SNAPSHOT",
+      "name": "fr.cgi~todoapp~1.0.0",
       "config": {
         "main" : "fr.cgi.todoapp.Todoapp",
         "port" : 8130,
